@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Course</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #f5f6fa;
+      display: flex;
+      height: 100vh;
+      color: #333;
+    }
+    .sidebar {
+      width: 250px;
+      background: white;
+      border-right: 1px solid #eee;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .sidebar .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: #6c63ff;
+      margin-bottom: 30px;
+    }
+    .sidebar ul {
+      list-style: none;
+    }
+    .sidebar ul li {
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .sidebar h4 {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #999;
+    }
+    .sidebar .friend {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+    .sidebar .friend img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    .banner {
+      background: linear-gradient(to right, #6c63ff, #857aff);
+      color: white;
+      border-radius: 20px;
+      padding: 30px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .banner h2 {
+      font-size: 24px;
+    }
+    .banner button {
+      background: white;
+      color: #6c63ff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .section-title {
+      margin: 30px 0 10px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .videos {
+      display: flex;
+      gap: 20px;
+    }
+    .video-card {
+      flex: 1;
+      background: white;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .video-card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .video-card .title {
+      font-weight: bold;
+      margin: 10px 0 5px;
+    }
+    .profile-panel {
+      width: 300px;
+      background: #fff;
+      padding: 20px;
+      border-left: 1px solid #eee;
+    }
+    .profile-panel .avatar {
+      display: block;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+    }
+    .profile-panel .name {
+      text-align: center;
+      font-weight: 600;
+    }
+    .profile-panel .desc {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+    }
+    .profile-panel .mentor-list {
+      margin-top: 20px;
+    }
+    .profile-panel .mentor-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+    .profile-panel .mentor-item img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .profile-panel button {
+      background: #6c63ff;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <div class="logo">🎯 COURSUE</div>
+      <ul>
+        <li><i class="fas fa-home"></i> Dashboard</li>
+        <li><i class="fas fa-inbox"></i> Inbox</li>
+        <li><i class="fas fa-book"></i> Lesson</li>
+        <li><i class="fas fa-tasks"></i> Task</li>
+        <li><i class="fas fa-users"></i> Group</li>
+        <li><i class="fas fa-upload"></i> Upload</li>
+      </ul>
+      <h4>FRIENDS</h4>
+      <div class="friend"><img src="aoi akane.jpg"> Marsha</div>
+      <div class="friend"><img src="sakura.jpg"> Firza</div>
+      <div class="friend"><img src="shijima.jpg"> Viola</div>
+    </div>
+    <div>
+      <div>⚙️ Settings</div>
+      <div style="color:red; margin-top:10px;">🚪 Logout</div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="search-bar">
+      <input type="text" placeholder="Search your course here...">
+    </div>
+
+    <div class="banner">
+      <div>
+        <h2>Sharpen Your Skills With<br>Professional Online Courses</h2>
+      </div>
+      <button>Join Now ▶</button>
+    </div>
+
+    <div class="section-title">Continue Watching</div>
+    <div class="videos">
+      <div class="video-card">
+        <img src="tbhk.jpg" alt="Course 1">
+        <div class="title">Jibaku Shounen Hanako-kun</div>
+        <small>Season 1</small>
+      </div>
+      <div class="video-card">
+        <img src="tbhhk2.jpg" alt="Course 2">
+        <div class="title">Jibaku Shounen Hanako-kun</div>
+        <small>Season 2</small>
+      </div>
+      <div class="video-card">
+        <img src="tbhk3.jpg" alt="Course 3">
+        <div class="title">Jibaku Shounen Hanako-kun</div>
+        <small>Season 3</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-panel">
+    <img src="iconyashiro.jpg" class="avatar">
+    <div class="name">Good Morning Nadia Rahmah</div>
+    <div class="desc">Continue Your Journey And Achieve Your Target</div>
+
+    <div class="mentor-list">
+      <div class="mentor-item">
+        <div><img src="yako.jpg"> Marsha</div>
+        <button>Follow</button>
+      </div>
+      <div class="mentor-item">
+        <div><img src="sumire.jpg"> Firza</div>
+        <button>Follow</button>
+      </div>
+      <div class="mentor-item">
+        <div><img src="hanako.jpg"> Jia</div>
+        <button>Follow</button>
+      </div>
+      <div class="mentor-item">
+        <div><img src="kou.jpg"> Nazwa</div>
+        <button>Follow</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
